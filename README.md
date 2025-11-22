@@ -1,73 +1,122 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+Book Shop – Online Store (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+پروژه Book Shop یک فروشگاه آنلاین است که با استفاده از React، TypeScript، Context API، React Router، Axios و JSON Server ساخته شده و شامل مدیریت سبد خرید، نمایش محصولات، صفحه جزئیات، و سه نوع دسته‌بندی مختلف است.
 
-Currently, two official plugins are available:
+این پروژه برای یادگیری معماری فرانت‌اند و پیاده‌سازی یک وب‌اپلیکیشن واقعی طراحی شده و قابلیت توسعه و افزودن ویژگی‌های جدید را دارد.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 ویژگی‌ها
+🔹 بخش محصولات
 
-## Expanding the ESLint configuration
+دریافت محصولات از سه API مختلف (articles, history, naval)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+ادغام و نمایش همه محصولات در یک صفحه
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+صفحه جزئیات برای هر محصول
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+کامپوننت‌های مجزا و قابل استفاده مجدد
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛒 مدیریت سبد خرید
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+اضافه کردن محصول
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+افزایش و کاهش تعداد
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
-# book_shop
->>>>>>> 466913a842b1471a0a8c131b690b77a9afed3d98
+حذف کردن از سبد
+
+محاسبه خودکار تعداد
+
+ذخیره در context
+
+🧭 مسیریابی کامل
+
+صفحه محصولات
+
+صفحه cart
+
+صفحه اطلاعات محصول
+
+صفحه دسته‌بندی‌ها
+
+صفحه Home (قابل توسعه)
+
+📡 اتصال به API
+
+ارتباط با سرور JSON
+
+دریافت جزئیات محصول
+
+دریافت دسته‌های مختلف
+
+مدیریت خطا
+
+🛠 تکنولوژی‌ها و ابزارها
+
+React (v18)
+
+TypeScript
+
+React Router Dom
+
+Context API
+
+Axios
+
+JSON Server
+
+CSS / TailwindCSS
+
+Vite (سریع و مدرن برای توسعه)
+
+📦 نصب و اجرا
+1️⃣ کلون کردن پروژه
+git clone https://github.com/alighodssi/book_shop.git
+cd book_shop
+
+2️⃣ نصب وابستگی‌ها
+npm install
+
+3️⃣ اجرای JSON Server
+npx json-server --watch db.json --port 9000
+
+4️⃣ اجرای پروژه
+npm run dev
+
+
+پروژه روی آدرس زیر اجرا می‌شود:
+
+http://localhost:5173
+
+📁 ساختار پوشه‌ها
+src
+ ├── api
+ ├── components
+ ├── context
+ ├── pages
+ ├── servers
+ ├── images
+ ├── App.tsx
+ └── main.tsx
+
+📷 تصاویر پروژه
+
+(می‌تونی بعداً اسکرین‌شات اضافه کنی)
+
+🔮 برنامه‌های آینده
+
+اضافه کردن جستجو
+
+فیلتر و دسته‌بندی پیشرفته
+
+بهبود طراحی Home Page
+
+ریسپانسیو قوی‌تر
+
+اضافه کردن احراز هویت (OTP یا Email)
+
+دیپلوی روی Vercel یا Netlify
+
+📌 توسعه‌دهنده
+
+Ali Ghodssi
+Front-End Developer (Internship Level)
+GitHub: https://github.com/alighodssi
