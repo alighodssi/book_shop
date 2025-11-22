@@ -1,0 +1,84 @@
+.DropMenu {
+  position: absolute;
+  top: 60px; /* بسته به ارتفاع navbar تغییر بده */
+  left:1200px;
+  background: #935aef;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  min-width: 180px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropdownFade 0.25s ease-out forwards;
+  z-index: 1000;
+  height: 150px;
+}
+
+@keyframes dropdownFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.DropMenu li {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.DropMenu li:hover {
+  background-color: #0077ff;
+  color: #fff;
+}
+
+.drop-link {
+  text-decoration: none;
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .DropMenu {
+    position: static;
+    box-shadow: none;
+    animation: none;
+    background: transparent;
+  }
+
+  .DropMenu li {
+    color: #fff;
+    background: #1e293b;
+    border-bottom: 1px solid #eee;
+  }
+
+  .DropMenu li:hover {
+    background: #1e293b;
+    color: #6214b0;
+  }
+}
+@media (max-width: 960px) {
+  .DropMenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    background: #1e293b;
+    border-radius: 0;
+    animation: none;
+    opacity: 1;
+    transform: none;
+    margin-top: 5px;
+  }
+
+  .DropMenu li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 14px;
+  }
+}
+

@@ -1,0 +1,124 @@
+/* Reset کوچک */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --bg:#0f1724;          /* پس‌زمینه صفحه */
+  --card:#0b1220;        /* کارت */
+  --accent:#2dd4bf;      /* رنگ دکمه/فوکوس */
+  --muted:#9aa4b2;       /* متن کم‌رنگ */
+  --input-bg: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.03);
+  --radius: 14px;
+  --max-width: 420px;    /* حداکثر پهنای کارت */
+  font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* صفحه مرکزی */
+.login-page{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(45,212,191,0.06), transparent),
+              linear-gradient(180deg, #061024 0%, var(--bg) 100%);
+  padding: 32px;
+}
+
+/* کارت لاگین */
+.login-card{
+  width: 100%;
+  max-width: var(--max-width);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  color: #e6eef6;
+}
+
+/* عنوان برند */
+.brand{
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+}
+
+/* هر فیلد شامل لیبل + اینپوت */
+.field{
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* متن لیبل (کوچک و کم‌رنگ) */
+.label-text{
+  display: block;
+  font-size: 0.86rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* استایل اینپوت بزرگ */
+.input{
+  width: 100%;
+  padding: 16px 18px;          /* بزرگ و راحت برای لمس */
+  font-size: 1.02rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: var(--input-bg);
+  color: #ecf6ff;
+  outline: none;
+  transition: box-shadow .18s ease, border-color .18s ease, transform .08s ease;
+}
+
+/* placeholder کم‌رنگ */
+.input::placeholder{ color: rgba(255,255,255,0.35); }
+
+/* افکت فوکوس (قابل مشاهده) */
+.input:focus{
+  border-color: rgba(45,212,191,0.95);
+  box-shadow: 0 6px 20px rgba(45,212,191,0.08), 0 1px 0 rgba(45,212,191,0.06) inset;
+  transform: translateY(-1px);
+}
+
+/* دکمه بزرگ */
+.btn{
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px 18px;
+  font-size: 1.02rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--accent), #06b6d4);
+  color: #022; /* رنگ متن تیره برای کنتراست */
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.45);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+/* حالت هاور / فعال دکمه */
+.btn:hover{ transform: translateY(-3px); opacity: .98; }
+.btn:active{ transform: translateY(-1px); box-shadow: 0 4px 14px rgba(2,6,23,0.35); }
+
+/* پایین کارت */
+.foot{
+  margin-top: 14px;
+  text-align: center;
+}
+.link{
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+.link:hover{ color: #d6f7ef; text-decoration: underline; }
+
+/* واکنش‌گرایی: صفحه های کوچک */
+@media (max-width:480px){
+  :root{ --max-width: 420px; }
+  .login-card{ padding: 28px 18px; border-radius: 12px; }
+  .brand{ font-size: 1.4rem; }
+  .input{ padding: 14px 12px; font-size: 1rem; }
+  .btn{ padding: 12px 12px; font-size: 1rem; }
+}

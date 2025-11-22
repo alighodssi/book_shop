@@ -1,0 +1,121 @@
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #1e1e2f, #f1f0f1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ArticlePage {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.fancy-title {
+  font-size: 3rem;
+  text-align: right;
+  color: #fff;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.ArticlePageSpan span {
+  display: inline-block;
+  margin: 20px 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 30px;
+  background: #a17df5;
+  color: #333;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: riseUp 1s ease forwards;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes riseUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.ImgContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.ArticlePageContent {
+  flex: 1;
+  text-align: justify;
+  line-height: 1.8;
+  color: #222;
+}
+
+
+.fantasy-imagee {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px 10px rgba(255, 0, 255, 0.5),
+              0 0 50px 20px rgba(0, 255, 255, 0.2),
+              inset 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: glow 4s ease-in-out infinite alternate;
+  transition: transform 0.4s ease;
+}
+
+.fantasy-imagee:hover {
+  transform: scale(1.05) rotateZ(1deg);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px 5px rgba(255, 0, 255, 0.4),
+                0 0 40px 10px rgba(0, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 30px 10px rgba(255, 0, 255, 0.6),
+                0 0 60px 20px rgba(0, 255, 255, 0.3);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .ImgContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .fantasy-imagee {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .ArticlePageContent {
+    text-align: center;
+  }
+}
