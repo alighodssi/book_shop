@@ -10,7 +10,6 @@ import { Naval } from "./page/naval"
 import { History } from "./page/History"
 import { Historycartpage } from "./page/historycartpage"
 import { Navalcartpage } from "./page/navalcartpage"
-import Test from "./test"
 
 
 
@@ -34,7 +33,7 @@ function App() {
           <Route path="/history" element={<History/>}/>
            <Route path="/history/:id" element={<Historycartpage />} />
             <Route path="/naval/:id" element={<Navalcartpage />} />
-            <Route path="/test" element={<Test/>}/>
+          
 
       </Routes>
 
